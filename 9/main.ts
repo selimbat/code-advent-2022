@@ -9,10 +9,10 @@ type Pos = {
 }
 type Move = 'U' | 'R' | 'D' | 'L';
 
-const posToStr = ({x, y}: Pos) => `${x}:${y}`;
+const posToStr = ({ x, y }: Pos) => `${x}:${y}`;
 
-const headPos: Pos = { x:0, y:0 };
-const tailPos: Pos = { x:0, y:0 };
+const headPos: Pos = { x: 0, y: 0 };
+const tailPos: Pos = { x: 0, y: 0 };
 
 const updateHead = (move: Move) => {
   switch (move) {
@@ -38,7 +38,7 @@ const updateTail = () => {
   };
 
   if (
-    posDiff.x !== 0 && 
+    posDiff.x !== 0 &&
     posDiff.y !== 0 &&
     (Math.abs(posDiff.x) > 1 || Math.abs(posDiff.y) > 1)
   ) {
